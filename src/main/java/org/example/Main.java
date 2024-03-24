@@ -1,8 +1,11 @@
 package org.example;
 
-import java.util.ArrayList;
+import org.example.Integer.IntegerArrayList;
+import org.example.Integer.IntegerList;
+import org.example.String.StringArraysList;
+import org.example.String.StringList;
+
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,8 +23,7 @@ public class Main {
         }
 
  */
-
-        System.out.println(list);
+    /*    System.out.println(list);
         list.remove("3");
         System.out.println(list);
         list.remove(4);
@@ -55,5 +57,53 @@ public class Main {
         System.out.println(Arrays.toString(list.toArray()));
         list.clear();
         System.out.println(Arrays.toString(list.toArray()));
+
+     */
+
+
+        IntegerList integerList = new IntegerArrayList(10);
+        System.out.println(integerList.isEmpty());
+
+        integerList.add(1);
+        integerList.add(2);
+        integerList.add(3);
+        integerList.add(4);
+        integerList.add(5);
+        integerList.add(6);
+        System.out.println(Arrays.toString(integerList.toArray()));
+
+        integerList.remove(2);
+        System.out.println(Arrays.toString(integerList.toArray()));
+
+        integerList.remove(4);
+        System.out.println(Arrays.toString(integerList.toArray()));
+
+        integerList.set(0,88);
+        System.out.println(Arrays.toString(integerList.toArray()));
+
+        integerList.add(1,77);
+        System.out.println(Arrays.toString(integerList.toArray()));
+
+        integerList.add(77);
+        System.out.println(Arrays.toString(integerList.toArray()));
+        System.out.println(integerList.size());
+
+        System.out.println(integerList.contains(77));
+        System.out.println(integerList.contains(100));
+
+        System.out.println(integerList.indexOf(77));
+        System.out.println(integerList.lastIndexOf(77));
+
+        IntegerList integerList1 = new IntegerArrayList(10);
+        integerList1.add(88);
+        integerList1.add(77);
+        integerList1.add(2);
+        integerList1.add(4);
+        integerList1.add(5);
+        integerList1.add(77);
+
+        System.out.println(integerList.equals(integerList1));
+        integerList.clear();
+        System.out.println(Arrays.toString(integerList.toArray()));
     }
 }
